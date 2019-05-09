@@ -1,0 +1,19 @@
+.Jumbotron {
+    height: 250px;
+    display: flex;
+    flex-flow: column;
+    padding: auto;
+    width: 90%;
+    background: linear-gradient(#18dcff, #17c0eb);
+    border: 0.5px solid #ccc;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Text {
+    font-size: 70px;
+    display: block;
+}

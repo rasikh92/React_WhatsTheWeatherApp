@@ -1,0 +1,57 @@
+.BigCard {
+    width: 50%;
+    height: 300px;
+    background: linear-gradient(#18dcff, #17c0eb);
+    border: 0.5px solid #ccc;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.min-temp {
+   margin-left: 2%;
+}
+
+.max-temp {
+    margin-left: 55%;
+}
+
+.title {
+    margin-left: 42%;
+    font-size: 40px; 
+    font-weight: bold;
+}
+
+.img-weather {
+    margin-top: -3%;
+    margin-bottom: 0px;
+    margin-left: 43%;
+    height: 75px;
+}
+
+.current-weather {
+    display: block;
+    margin-top: -3%;
+    margin-left: 47%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.desc {
+    display: block;
+    margin-top: -2%;
+    margin-left: 41%;
+}
+
+.humidity {
+    display: block;
+    margin-top: -2%;
+    margin-left: 2%;
+}
+
+.wind-speed {
+    display: block;
+    margin-top: -6%;
+    margin-left: 67%;
+}

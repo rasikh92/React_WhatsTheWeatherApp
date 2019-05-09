@@ -1,0 +1,30 @@
+.Search {
+    width: 90%;
+    margin: 2% auto;
+    height: 100px;
+    display: flex;
+    flex-flow: row;
+    padding: auto;
+    background: linear-gradient(#18dcff, #17c0eb);
+    border: 0.5px solid #ccc;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    margin: 2%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.about {
+    margin-left: 40%;
+}
+input:focus {
+    background-color: #dfe6e9;
+}

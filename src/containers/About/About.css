@@ -1,0 +1,19 @@
+.About {
+    width: 50%;
+    background: linear-gradient(#18dcff, #17c0eb);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    min-height: 50vh;
+    align-items: center;
+    border-radius: 7px;
+    border: 0.5px solid #ccc;
+    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+p {
+    padding: 0 50px 0 50px;
+    line-height: 8vh;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
