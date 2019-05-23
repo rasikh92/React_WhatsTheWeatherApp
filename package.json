@@ -1,7 +1,11 @@
 {
   "name": "whatstheweatherapp",
   "version": "0.1.0",
+<<<<<<< HEAD
   "homepage": "https://rasikh92.github.io/React_WhatsTheWeatherApp",
+=======
+  "homepage": "https://rasikh92.github.io/React_WhatsTheWeatherApp/",
+>>>>>>> 97209eac0ab1545d0e9cb79195d8fc6b8a193701
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.3",
