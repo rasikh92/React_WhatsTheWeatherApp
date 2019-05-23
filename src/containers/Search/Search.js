@@ -5,12 +5,8 @@ import List from '../../components/List/List';
 import Axios from 'axios';
 import _ from 'lodash';
 import BigCard from '../../components/BigCard/BigCard';
-import Card from '../../components/Card/Card';
-import cityTimezones from 'city-timezones';
 import GetTime from '../../components/GetTime/GetTime';
 import {connect} from 'react-redux';
-import Spinner from '../../components/Spinner/Spinner';
-import { async } from 'q';
 
 class Search extends Component {
     state = {
@@ -26,7 +22,6 @@ class Search extends Component {
             const url = 'https://api.openweathermap.org/data/2.5/weather?lat='+
             position.coords.latitude+'&lon='+position.coords.longitude+'&units=metric'+'&appid='+apiKey 
             this.fetchData(url,true);
-            //console.log(position.coords.latitude,position.coords.longitude);
         })
     }
     componentWillMount() {
@@ -65,21 +60,14 @@ class Search extends Component {
         event.preventDefault();
         event.persist();
         this.setState({firstrun: false, touched: false});
-        if(event.target.value !== "" || !this.state.touched) {
-            //const date = new Date(0);
-            //const time = date.getHours();
-            //console.log(time);
-            //const time = cityTimezones.lookupViaCity('Bangkok');
-            //const t = date.toLocaleString('en-AU', {hour: '2-digit',   hour12: false, timeZone: time[0].timezone })
-            //console.log(t);
-            //console.log(time[0].timezone);
-        
-        const apiKey = '23ae9231000a3683d24bd17fbf104be3';
-        const url = 'https://api.openweathermap.org/data/2.5/weather?q='+event.target.value+'&units=metric'+'&appid='+apiKey 
-        this.run(url, false);
+        if(event.target.value === "") {
+            
         }
-        
-        //this.setState({text: event.target.value});
+        else if(event.target.value !== "") {   
+            const apiKey = '23ae9231000a3683d24bd17fbf104be3';
+            const url = 'https://api.openweathermap.org/data/2.5/weather?q='+event.target.value+'&units=metric'+'&appid='+apiKey 
+            this.run(url, false);
+        }
         
     }
 
@@ -96,7 +84,8 @@ class Search extends Component {
         <React.Fragment>
             <div className={this.props.class}>
                 <input placeholder="Enter a city name" onChange={this.onChangedHandler}></input>
-                <NavigationItem label="Submit" daytype={this.props.daytype} type="Submit" clicked={this.onSubmitHandler}/>
+                <NavigationItem label="Submit" daytype={this.props.daytype} type="Submit" 
+                clicked={this.onSubmitHandler}/>
                 <div className="about" type="About">
                     <NavigationItem daytype={this.props.daytype} label="About Me"/>
                 </div>

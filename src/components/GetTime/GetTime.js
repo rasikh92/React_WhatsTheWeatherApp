@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-import { async } from 'q';
 import Card from '../Card/Card';
 import Spinner from '../../components/Spinner/Spinner';
 import {connect} from 'react-redux';

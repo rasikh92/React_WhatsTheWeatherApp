@@ -34,7 +34,8 @@ const Card = props => {
 
             for(let list in newList) {
                 //setup date
-                const newDate = new Date(newList[list].dt_txt);
+                let newDate = newList[list].dt_txt.split(/[- :]/);
+                newDate = new Date(newDate[0], newDate[1]-1, newDate[2], newDate[3], newDate[4], newDate[5]);
                 newList[list].dt_txt = newDate.toString().substring(0,10);
                 //setup icon
                 const url = "https://openweathermap.org/img/w/"+newList[list].weather[0].icon+".png";
@@ -53,7 +54,7 @@ const Card = props => {
                 return (
                     <li className={props.class} key={result.dt}>
                     <div className="slider">
-                        <label className="min-temp">Min Temp: {result.main.temp_min.toFixed(0)}&deg;</label>
+                        <label className="card-min-temp">Min Temp: {result.main.temp_min.toFixed(0)}&deg;</label>
                         <label className="card-max-temp">Max Temp: {result.main.temp_max.toFixed(0)}&deg;</label>
                         <br></br>
                         <br></br>

@@ -21,6 +21,7 @@ return (<nav>
                 <button className={hovered ? ["NavigationItem Button default",props.daytype.toLowerCase()].join(' ') : "NavigationItem Button"} 
                         onMouseEnter={toggleHover}
                         onMouseLeave={toggleHover}
+                        onClick={props.clicked}
                 > 
                         {props.label} 
                 </button>
