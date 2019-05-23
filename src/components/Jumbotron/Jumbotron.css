@@ -13,7 +13,28 @@
     text-align: center;
 }
 
+.night {
+    background: linear-gradient(#30336b,#130f40);
+}
+
+.morning {
+    background: linear-gradient(#ffeaa7, #fdcb6e);
+}
+
+.afternoon {
+    background: linear-gradient(#fbc531, #e1b12c);
+}
+
 .Text {
     font-size: 70px;
     display: block;
+}
+
+@media(max-width: 500px) {
+    .Jumbotron {
+        height: 200px;
+    }
+    .Text {
+        font-size: 30px;
+    }
 }

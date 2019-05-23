@@ -7,6 +7,8 @@
     border-radius: 7px;
     text-align: left;
     font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    animation: start 0.5s linear;
 }
 
 .min-temp {
@@ -14,17 +16,19 @@
 }
 
 .max-temp {
-    margin-left: 55%;
+    margin-left: 50%;
 }
 
 .title {
-    margin-left: 42%;
+    display: block;
+    text-align: center;
     font-size: 40px; 
     font-weight: bold;
 }
 
 .img-weather {
-    margin-top: -3%;
+    display: block;
+    margin-top: -7%;
     margin-bottom: 0px;
     margin-left: 43%;
     height: 75px;
@@ -33,7 +37,7 @@
 .current-weather {
     display: block;
     margin-top: -3%;
-    margin-left: 47%;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
@@ -41,17 +45,54 @@
 .desc {
     display: block;
     margin-top: -2%;
-    margin-left: 41%;
+    text-align: center;
 }
 
 .humidity {
     display: block;
-    margin-top: -2%;
+    margin-top: -3%;
     margin-left: 2%;
 }
 
 .wind-speed {
     display: block;
     margin-top: -6%;
-    margin-left: 67%;
+    margin-left: 69%;
+    font-size: 23px;
+}
+
+@keyframes start {
+    0% {
+        transform: scale(0.7);
+    }
+    25% {
+        transform: scale(0.8)
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 500px) {
+    .BigCard {
+        width: 90%;
+        height: 260px;
+    }
+    .max-temp {
+        margin-left: 35%;
+    }
+    .wind-speed {
+        margin-left: 58%;
+        margin-top: -8%;
+        font-size: 15px;
+    }
+    .humidity {
+        margin-top: -5%;
+    }
+    .title {
+        font-size: 35px;
+    }
 }

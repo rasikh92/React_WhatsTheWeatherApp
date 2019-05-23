@@ -21,3 +21,15 @@
     cursor: pointer;
     background-color: #dfe6e9;
 }
+
+@media(max-width: 500px) {
+    .ul {
+        margin-top: -27px;
+        margin-left: -175px;
+    }
+    .List {
+        padding: none;
+        width: 155px;
+        height: 25px;
+    }
+}

@@ -14,6 +14,14 @@
     text-align: center;
 }
 
+.night {
+    background: linear-gradient(#30336b,#130f40);
+}
+
+.morning {
+    background: linear-gradient(#ffeaa7, #fdcb6e);
+}
+
 input {
     margin: 2%;
     font-size: 20px;
@@ -27,4 +35,16 @@ input {
 }
 input:focus {
     background-color: #dfe6e9;
+}
+
+@media(max-width: 500px) {
+    .Search {
+        height: 80px;
+    }
+    input {
+        font-size: 12px;
+    }
+    .about {
+        margin-left: 0;
+    }
 }

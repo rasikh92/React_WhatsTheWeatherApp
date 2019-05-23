@@ -1,4 +1,5 @@
 .Footer {
+    margin-top: 20%;
     line-height: 8vh;
     width: 90%;
     background: linear-gradient(#18dcff, #17c0eb);
@@ -7,6 +8,18 @@
     border-radius: 7px;
     font-size: 30px;
     font-weight: bold;
+}
+
+.night {
+    background: linear-gradient(#30336b,#130f40);
+}
+
+.morning {
+    background: linear-gradient(#ffeaa7, #fdcb6e);
+}
+
+.afternoon {
+    background: linear-gradient(#fbc531, #e1b12c);
 }
 
 .img {
@@ -21,4 +34,17 @@
 .img:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media(max-width: 500px) {
+    .Footer {
+        font-size: 20px;
+        margin-top: 50%;
+        line-height: 3.5vh;
+        overflow: hidden;
+    }
+    .img {
+        height: 30px;
+        width: 30px;
+    }
 }

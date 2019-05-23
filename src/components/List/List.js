@@ -3,20 +3,8 @@ import './List.css';
 
 const list = props => (
     <ul className="ul">
-        <li className="List">
-        London
-        </li>
-        <li className="List">
-        London
-        </li>
-        <li className="List">
-        London
-        </li>
-        <li className="List">
-        London
-        </li>
-        <li className="List">
-        London
+        <li className="List" onClick={props.clicked}>
+            {props.text}
         </li>
     </ul>
 )

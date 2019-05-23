@@ -4,11 +4,31 @@
 
 .App-header {
   background-color: #18dcff;
-  min-height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Night {
+  background-color: #130f40;
+}
+
+.Morning {
+  background-color: #ffeaa7;
+}
+
+.Afternoon {
+  background-color: #fbc531;
+}
+
+@media(max-width: 500px) {
+  .App {
+    overflow: hidden;
+  }
+  .App-header {
+    overflow: hidden;
+  }
 }

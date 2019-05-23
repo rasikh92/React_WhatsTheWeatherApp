@@ -5,15 +5,38 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    margin-top: 2%;
     min-height: 50vh;
     align-items: center;
     border-radius: 7px;
     border: 0.5px solid #ccc;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-weight: bold;
+}
+
+.night {
+    background: linear-gradient(#30336b,#130f40);
+}
+
+.morning {
+    background: linear-gradient(#ffeaa7, #fdcb6e);
+}
+
+.afternoon {
+    background: linear-gradient(#fbc531, #e1b12c);
 }
 
 p {
     padding: 0 50px 0 50px;
     line-height: 8vh;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+@media(max-width: 500px) {
+    .About {
+        width: 80%;
+    }
+    p {
+        padding: 0 10px 0 10px;
+    }
 }

@@ -3,7 +3,7 @@ import './Footer.css';
 import Img from '../../assets/Octocat.png';
 
 const footer = props => (
-    <div className="Footer">
+    <div className={props.class}>
         <label>&copy;2019 Rasikh92</label>
         <a href="https://github.com/rasikh92/React_GitUsersApp"
                 target="blank">

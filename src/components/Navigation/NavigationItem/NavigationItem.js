@@ -1,22 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './NavigationItem.css';
 import HomeIcon from '@material-ui/icons/Home';
+import {NavLink, withRouter} from 'react-router-dom';
 
-const navigationItem = (props) => (
-<nav>
+const NavigationItem = (props) => {
+        const [hovered, setHovered] = useState(false);
+        const toggleHover = () => setHovered(!hovered);
+        
+return (<nav>
         {props.type === 'Home' ? 
-        <button className="NavigationItem"> 
-                <HomeIcon className="icon"> {props.label} </HomeIcon>
-        </button>
+        <NavLink to="/" style={{ textDecoration: 'none' }} exact>
+                <button className={hovered ? ["NavigationItem default",props.daytype.toLowerCase()].join(' ') : "NavigationItem"} 
+                        onMouseEnter={toggleHover}
+                        onMouseLeave={toggleHover}
+                > 
+                        <HomeIcon className="icon"></HomeIcon> {props.label} 
+                </button>
+        </NavLink>
         : props.type === 'Submit' ?
-        <button className="NavigationItem Button"> 
-                {props.label} 
-        </button>
+                <button className={hovered ? ["NavigationItem Button default",props.daytype.toLowerCase()].join(' ') : "NavigationItem Button"} 
+                        onMouseEnter={toggleHover}
+                        onMouseLeave={toggleHover}
+                > 
+                        {props.label} 
+                </button>
         :
-        <button className="NavigationItem"> {props.label} 
-        </button>
+        <NavLink to="/about" style={{ textDecoration: 'none' }}>
+                <button className={hovered ? ["NavigationItem default",props.daytype.toLowerCase()].join(' ') : "NavigationItem"} 
+                        onMouseEnter={toggleHover}
+                        onMouseLeave={toggleHover}
+                >
+                        {props.label} 
+                </button>
+        </NavLink>
         }
-</nav>
-)
+</nav>)
+}
 
-export default navigationItem;
+export default withRouter(NavigationItem);

@@ -1,27 +1,27 @@
 import React from 'react';
 import './App.css';
+import Home from './containers/Home/Home';
+import {connect} from 'react-redux';
+import {Switch, Route, withRouter} from 'react-router-dom';
 import About from './containers/About/About';
-import NavigationItem from './components/Navigation/NavigationItem/NavigationItem';
-import Jumbotron from './components/Jumbotron/Jumbotron';
-import Search from './containers/Search/Search';
-import Card from './components/Card/Card';
-import List from './components/List/List';
-import Footer from './components/Footer/Footer';
-import BigCard from './components/BigCard/BigCard';
 
-function App() {
+const App = props => {
   return (
     <div className="App">
-      <header className="App-header">
-          <Jumbotron />
-          <Search />
-          <List />
-          <BigCard />
-          <Card />
-          <Footer />
+      <header className={["App-header",props.daytype].join(' ')}> 
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" render = {() => <About class={['About',props.daytype.toLowerCase()].join(' ')}/>} />
+          </Switch>
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    daytype: state.text
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(App));

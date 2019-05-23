@@ -13,12 +13,30 @@
     font-family: inherit;
     font-size: 25px;
     background-color: inherit;
-    color: inherit;
+    color: white;
 }
 
-.NavigationItem:hover {
+.default {
     cursor: pointer;
     background-color: #00a8ff;
+    animation: hover 0.3s linear;
+}
+
+.night {
+    cursor: pointer;
+    background-color: linear-gradient(#30336b,#130f40);
+    animation: hover 0.3s linear;
+}
+
+.morning {
+    cursor: pointer;
+    background-color: linear-gradient(#ffeaa7, #fdcb6e);
+    animation: hover 0.3s linear;
+}
+
+.afternoon {
+    cursor: pointer;
+    background-color: linear-gradient(#fbc531, #e1b12c);
     animation: hover 0.3s linear;
 }
 
@@ -41,4 +59,19 @@
 
 .icon {
     margin: -1% 0 -3% 0; 
+}
+
+@media(max-width: 500px) {
+    .NavigationItem {
+        display: block;
+        font-size: 15px;
+        width: 60px;
+        height: 50px;
+        border: none;
+    }
+    .Button {
+        width: 70px;
+        height: 40px;
+        border: 1px solid #ccc;
+    }
 }
