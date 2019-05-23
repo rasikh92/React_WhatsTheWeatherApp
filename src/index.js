@@ -11,7 +11,7 @@ import {BrowserRouter} from 'react-router-dom';
 const store = createStore(reducer);
 
 ReactDOM.render(<Provider store={store}>
-                    <BrowserRouter><App /></BrowserRouter>
+                    <BrowserRouter basename="src"><App /></BrowserRouter>
                 </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
